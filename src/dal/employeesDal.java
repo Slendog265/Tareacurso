@@ -46,6 +46,15 @@ public final class employeesDal {
 		public void setHEmp(List<hourEmployee> hEmp) {
 			this.hEmp = hEmp;
 		}
+		
+		public List<monthEmployee> getmEmp() {
+			return mEmp;
+		}
+
+		public void setmEmp(List<monthEmployee> mEmp) {
+			this.mEmp = mEmp;
+		}
+
 		public String getFilePath() {
 			return filePath;
 		}
@@ -80,7 +89,7 @@ public final class employeesDal {
 		}
 		
 		public List<hourEmployee> openList() {
-			File file = new File(filePath);
+			File file = new File(filePath + "\\" + fileName);
 			try {
 				ObjectInputStream o = new ObjectInputStream(new FileInputStream(file));
 				List<hourEmployee> he = (List<hourEmployee>) o.readObject();

@@ -1,5 +1,7 @@
 package bll;
 
+import java.util.Scanner;
+
 import dal.Pp;
 import dol.hourEmployee;
 import dol.monthEmployee;
@@ -9,7 +11,7 @@ import ui.addHourEmp;
 public final class Data {
 
 	public static Pp G = new Pp();
-	
+	private static Scanner entry;
 	public static void addHoEmp (hourEmployee m ) {
 		G.addHoEmp(m);
 	} 
@@ -23,7 +25,7 @@ public final class Data {
 	}
 	
 	public static void catchMEmployee() {
-		addEmployee me = new addEmployee();
+		addEmployee me = new addEmployee(entry);
 		addMoEmp(me.MEmployee());
 	}
 	

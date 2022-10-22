@@ -9,25 +9,34 @@ import ui.addHourEmp;
 
 public class dedudCalc  {
 	private hourEmployee m;
+	private monthEmployee f;
 	
+
 	
 	
 	public dedudCalc() {
 		super();
 	}
 
-	public dedudCalc(hourEmployee m) {
+
+	public dedudCalc(hourEmployee m ) {
 		super();
 		this.m = m;
 	}
 
-	monthEmployee f = new monthEmployee();
 	
 
+
+	public dedudCalc(monthEmployee f) {
+		super();
+		this.f = f;
+	}
+
+
 	public hourEmployee calcDedud1() {
-		Integer Tarifa = m.getTar();
-		Integer Horas = m.getHour();
-		Integer Total1 = Horas * Tarifa;
+		int Tarifa = m.getTar();
+		int Horas = m.getHour();
+		int Total1 = Horas * Tarifa;
 		m.setBruteWage(Total1);	
 		double numb = Total1;
 		double SmD = 0, IrM = 0, pApli = 0,Dedud = 0, netSalry = 0, IA = 0;
@@ -82,13 +91,13 @@ public class dedudCalc  {
 	}
 	
 	public hourEmployee calcDedud2() {
-		Integer Tarifa = m.getTar();
-		Integer Horas = m.getHour();
-		Integer Total1 = Horas * Tarifa;
-		Integer Xtarifa = m.getXtraTar();
-		Integer XHora = m.getXtraHours();
-		Integer Total2 = XHora * Xtarifa;
-		Integer Brute = Total1 + Total2;
+		int Tarifa = m.getTar();
+		int Horas = m.getHour();
+		int Total1 = Horas * Tarifa;
+		int Xtarifa = m.getXtraTar();
+		int XHora = m.getXtraHours();
+		int Total2 = XHora * Xtarifa;
+		int Brute = Total1 + Total2;
 		m.setBruteWage(Brute);
 		double numb = Total1;
 		double SmD = 0, IrM = 0, pApli = 0,Dedud = 0, netSalry = 0, IA = 0;

@@ -1,6 +1,8 @@
 package dol;
 
-public class monthEmployee extends Person {
+import java.io.Serializable;
+
+public class monthEmployee extends Person implements Serializable {
 	
 	private Double minimumWage;
 	private Double netSalary;

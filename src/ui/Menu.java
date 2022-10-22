@@ -72,15 +72,11 @@ public final class Menu {
 	
 	private void add() {
 		addHourEmp em = new addHourEmp(entry);
-		employeesDal ed = new employeesDal();
-		ed.AddHoemp(em.hEmployee());
+		dedudCalc dc = new dedudCalc();
+		hEmp.add(em.hEmployee());
 	}
 	
-	private void calcH() {
-		addHourEmp em = new addHourEmp(entry);
-		dedudCalc dc = new dedudCalc(null);
-		em.calcDedud2();
-		}
+	
 	
 	private void save() {
 		employeesDal ed = new employeesDal();
@@ -94,12 +90,15 @@ public final class Menu {
 	}
 	
 	public void open() {
+		employeesDal ed = new employeesDal();
 		System.out.println("Por favor indique la ruta del archivo para abrir ");
 		String filepath = entry.next();
-		employeesDal ed = new employeesDal();
 		ed.setFilePath(filepath);
+		System.out.println("Por favor indique el nombre del archivo para abrir ");
+		String filename = entry.next();
+		ed.setFileName(filename);
 		hEmp = ed.openList();
-		addHourEmp em = new addHourEmp(entry);
+		ed.setHEmp(hEmp);
 		ed.show();
 	}
 }

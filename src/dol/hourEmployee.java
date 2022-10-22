@@ -1,13 +1,15 @@
 package dol;
 
-public class hourEmployee extends Person {
+import java.io.Serializable;
+
+public class hourEmployee extends Person implements Serializable {
 	
-	private Integer Hour;
-	private Integer xtraHours;
-	private Integer Tar;
-	private Integer xtraTar;
-	private Integer BruteWage;
-	private Double NetSalary;
+	private int Hour;
+	private int xtraHours;
+	private int Tar;
+	private int xtraTar;
+	private int BruteWage;
+	private double NetSalary;
 	
 	
 	
@@ -17,8 +19,8 @@ public class hourEmployee extends Person {
 
 
 	public hourEmployee(String firstName, String secondName, String fisrtLname, String secondLname, String id,
-			Double iNSS, Double ir, Double toDedud, Integer hour, Integer xtraHours, Integer tar, Integer xtraTar,
-			Integer bruteWage, Double netSalary) {
+			Double iNSS, Double ir, Double toDedud, int hour, int xtraHours, int tar, int xtraTar,
+			int bruteWage, Double netSalary) {
 		super(firstName, secondName, fisrtLname, secondLname, id, iNSS, ir, toDedud);
 		Hour = hour;
 		this.xtraHours = xtraHours;
@@ -32,40 +34,40 @@ public class hourEmployee extends Person {
 		return Hour;
 	}
 
-	public void setHour(Integer hour) {
+	public void setHour(int hour) {
 		this.Hour = hour;
 	}
 
-	public Integer getXtraHours() {
+	public int getXtraHours() {
 		return xtraHours;
 	}
 
-	public void setXtraHours(Integer xtraHours) {
+	public void setXtraHours(int xtraHours) {
 		this.xtraHours = xtraHours;
 	}
 
-	public Integer getTar() {
+	public int getTar() {
 		return Tar;
 	}
 
-	public void setTar(Integer tar) {
+	public void setTar(int tar) {
 		Tar = tar;
 	}
 
-	public Integer getXtraTar() {
+	public int getXtraTar() {
 		return xtraTar;
 	}
 
-	public void setXtraTar(Integer xtraTar) {
+	public void setXtraTar(int xtraTar) {
 		this.xtraTar = xtraTar;
 	}
 	
 	
-	public Integer getBruteWage() {
+	public int getBruteWage() {
 		return BruteWage;
 	}
 
-	public void setBruteWage(Integer bruteWage) {
+	public void setBruteWage(int bruteWage) {
 		BruteWage = bruteWage;
 	}
 	

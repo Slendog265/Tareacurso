@@ -13,7 +13,7 @@ public class Pp {
 	private List<hourEmployee> HEmp;
 	private List<monthEmployee> MEmp;
 	//Menu q = new Menu();
-	MenuMEmp w = new MenuMEmp();
+	MenuMEmp w = new MenuMEmp(MEmp);
 	
 	public Pp() {
 		HEmp = new ArrayList<hourEmployee>();
