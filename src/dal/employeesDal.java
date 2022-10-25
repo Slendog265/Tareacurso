@@ -88,6 +88,22 @@ public final class employeesDal {
 			}
 		}
 		
+public void saveList1() {
+			
+			File file = new File(filePath + "\\" + fileName);
+			try {
+				
+				ObjectOutputStream os =  new ObjectOutputStream(new FileOutputStream(file));
+				os.writeObject(mEmp);
+				os.flush();
+				os.close();
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		public List<hourEmployee> openList() {
 			File file = new File(filePath + "\\" + fileName);
 			try {
@@ -108,18 +124,27 @@ public final class employeesDal {
 			return null;
 		}
 		
-		public void show() {
-			System.out.println("\033[35m===================================================\u001B[0m");
-			System.out.println("|              Listado de Empleados               |");
-			System.out.println("\033[35m===================================================\u001B[0m");
-			for(int i=0; i<hEmp.size();i++) {
-				hEmp.get(i).showData();
-		    System.out.println("\n\033[35m===================================================\u001B[0m");
-		   
-		    
-		    
+		
+		public List<monthEmployee> openList1() {
+			File file = new File(filePath + "\\" + fileName);
+			try {
+				ObjectInputStream o = new ObjectInputStream(new FileInputStream(file));
+				List<monthEmployee> me = (List<monthEmployee>) o.readObject();
+				o.close();
+				return me;
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
+			return null;
 		}
 		
+	
 }
 

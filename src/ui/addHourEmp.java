@@ -73,6 +73,18 @@ public final class addHourEmp {
 		return m;
 	}
 	
+	public void show() {
+		System.out.println("\033[35m===================================================\u001B[0m");
+		System.out.println("|              Listado de Empleados               |");
+		System.out.println("\033[35m===================================================\u001B[0m");
+		for(int i=0; i<hEmp.size();i++) {
+			hEmp.get(i).showData();
+	    System.out.println("\n\033[35m===================================================\u001B[0m");
+	   
+	    
+	    
+		}
+	}
 		
 	}
 	

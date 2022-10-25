@@ -58,7 +58,18 @@ public class addEmployee {
 		return f;
 	}
 	
-		
+	public void show() {
+		System.out.println("\033[35m===================================================\u001B[0m");
+		System.out.println("|              Listado de Empleados               |");
+		System.out.println("\033[35m===================================================\u001B[0m");
+		for(int i=0; i<mEmp.size();i++) {
+			mEmp.get(i).showData2();
+	    System.out.println("\n\033[35m===================================================\u001B[0m");
+	   
+	    
+	    
+		}
+	}
 	
 	
 	}

@@ -17,14 +17,12 @@ public final class Menu {
 	
 	
 	
-	public Menu(Scanner entry) {
+	public Menu(Scanner entry,List<hourEmployee> hEmp) {
 		super();
 		this.entry = entry;
-	}
-	public Menu(List<hourEmployee> hEmp) {
-		super();
 		this.hEmp = hEmp;
 	}
+	
 	/**public Menu(Scanner scan, List<hourEmployee> hEmp) {
 		super();
 		entry = new Scanner(System.in);
@@ -46,7 +44,7 @@ public final class Menu {
 	switch(op1) {
 			
 			case 1:
-				hEmp = new ArrayList<hourEmployee>();
+				
 				add();
 				//calcH();
 				break;
@@ -99,6 +97,7 @@ public final class Menu {
 		ed.setFileName(filename);
 		hEmp = ed.openList();
 		ed.setHEmp(hEmp);
-		ed.show();
+		addHourEmp em = new addHourEmp(hEmp);
+		em.show();
 	}
 }
